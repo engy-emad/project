@@ -462,6 +462,7 @@ nav {
 .person_contact_info span {
     display: block;
     margin-block: 1em;
+    cursor: pointer;
 }
 
 .person_contact_info i {
