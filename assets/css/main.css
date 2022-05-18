@@ -485,18 +485,6 @@ nav {
 /* ============================= END SECTION PERSONS =============================*/
 
 
-/* ============================= MEDIA QUARY SECTION PERSONS =============================*/
-
-@media(max-width:1020px) {
-    .users_users {
-        flex-wrap: wrap;
-    }
-}
-
-
-/* ============================= END MEDIA QUARY SECTION PERSONS =============================*/
-
-
 /* ============================= SECTION BOOKS =============================*/
 
 .books_books {
@@ -591,6 +579,8 @@ footer {
 }
 
 footer a {
+    font-size: 1.12em;
+    font-weight: 300;
     color: var(--white);
 }
 
