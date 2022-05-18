@@ -127,7 +127,7 @@ function getCompanies() {
 
 function randerPersons(persons) {
     personsContainer.innerHTML = "";
-    // console.log(personsContainer);
+    console.log(personsContainer);
     // persons repated
     persons.forEach(person => {
         // buliding structure personsContainer
@@ -144,7 +144,7 @@ function randerPersons(persons) {
    
            <div class="person_name">
    
-               <span class="person_name_full">${person.firstname} ${person.lastname}</span>
+               <span class="person_name_full">${person.firstname}${person.lastname}</span>
    
            </div>
            <div class="person_type_data">
@@ -222,7 +222,7 @@ function getPersons() {
 // function randerBooks buliding structure booksContainer and repated book
 
 function randerBooks(books) {
-    // console.log(books);
+    console.log(books);
     books.forEach(book => {
         booksContainer.innerHTML += `
        <div class="book ">
@@ -275,11 +275,10 @@ function preventDefault(event) {
 
 }
 
-function searchPersons(input) {
-    let searchInput = input.value.toLowerCase();
-    // console.log(searchInput.value)
-    const matchedPersons = persons.filter(person => person.firstname.toLowerCase().includes(searchInput) ||
-        person.lastname.toLowerCase().includes(searchInput))
+function searchPersons(event) {
+    const searchInput = event.target;
+    console.log(searchInput.value)
+    const matchedPersons = persons.filter(person => person.firstname.includes(searchInput.value.toLowerCase()))
     randerPersons(matchedPersons)
     console.log(matchedPersons);
 }
