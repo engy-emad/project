@@ -86,8 +86,8 @@ nav {
 }
 
 .form_form form input {
-    font-size: 1.25em;
-    padding: .5em .97em;
+    font-size: 1.5em;
+    padding: .5em 3em;
     border-radius: 7px;
     box-shadow: 0 2px 12px 3px rgba(53, 53, 53, 0.1);
 }
@@ -106,7 +106,7 @@ nav {
 }
 
 .form_form form input::placeholder {
-    font-size: .6em;
+    font-size: .9em;
 }
 
 
@@ -131,6 +131,13 @@ nav {
     .navbar_form {
         flex-wrap: wrap;
         justify-content: center;
+    }
+}
+
+@media(max-width:560px) {
+    .form_form form input {
+        padding-inline: 0;
+        padding-inline: 2em;
     }
 }
 
@@ -286,8 +293,26 @@ nav {
 
 /* ============================= SECTION COMPANIES =============================*/
 
+.title h2 {
+    padding: .1em .5em;
+    font-size: 2em;
+    font-weight: 300;
+    margin-block: 1em;
+    background: var(--dark-blue);
+    color: var(--white);
+    border: 3px solid var(--orange);
+}
+
 .companies {
     margin-top: 6em;
+}
+
+.loader_companies,
+.loader_persons,
+.loader_books {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .companies_companies {
@@ -373,15 +398,6 @@ nav {
 
 /* ============================= SECTION PERSONS  =============================*/
 
-.title h2 {
-    padding: .1em .5em;
-    font-size: 2em;
-    margin-block: 1em;
-    background: var(--dark-blue);
-    color: var(--white);
-    border: 3px solid var(--orange);
-}
-
 .persons_persons {
     display: flex;
     justify-content: space-around;
@@ -399,14 +415,6 @@ nav {
     box-shadow: 0 2px 12px 3px rgba(53, 53, 53, 0.1);
     margin: 3em .5em;
     border-radius: 7px;
-}
-
-.loader_companies,
-.loader_persons,
-.loader_books {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .person_head {
@@ -568,35 +576,27 @@ nav {
 }
 
 
-/* .loader {
-    border: 7px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 7px solid #3498db;
-    width: 30px;
-    height: 30px;
-    -webkit-animation: spin 2s linear infinite;
-   
-    animation: spin 2s linear infinite;
-}
-
-
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-} */
-
-
 /* ============================= END SECTION BOOKS =============================*/
+
+
+/* ============================= END MAIN =============================*/
+
+
+/* ============================= START FOOTER =============================*/
+
+footer {
+    padding: 1.5em;
+    color: var(--white);
+}
+
+footer a {
+    color: var(--white);
+}
+
+footer a:hover {
+    color: var(--orange);
+    transition: .03s;
+}
+
+
+/* ============================= END FOOTER =============================*/

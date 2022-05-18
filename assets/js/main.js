@@ -270,9 +270,20 @@ function getBooks() {
 }
 
 
+function preventDefault(event) {
+    event.preventDefault();
+
+}
+
+function searchPersons(event) {
+    const searchInput = event.target;
+    console.log(searchInput.value)
+    const matchedPersons = persons.filter(person => person.firstname.includes(searchInput.value))
+    randerPersons(matchedPersons)
+    console.log(matchedPersons);
+}
 
 
-// function showData to make await functions implemnted
 
 async function showData() {
     await RanderProducts.fetchFromAPI();
@@ -282,21 +293,4 @@ async function showData() {
 
 
 }
-
-
-function preventDefault(event) {
-    event.preventDefault();
-
-}
-// function searchPersons to make filter person
-function searchPersons(event) {
-
-    const searchInput = event.target;
-    console.log(searchInput.value)
-    const matchedPersons = persons.filter(person => person.firstname.includes(searchInput.value))
-    randerPersons(matchedPersons)
-
-    console.log(matchedPersons);
-}
-
 showData()
