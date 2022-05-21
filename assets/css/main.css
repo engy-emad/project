@@ -96,6 +96,7 @@ nav {
 
 .form_form form input:hover {
     border: 2px solid #ff6d21;
+    transition: border 0.03s;
 }
 
 .form_form form {
