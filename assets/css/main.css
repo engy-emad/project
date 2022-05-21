@@ -89,8 +89,13 @@ nav {
 .form_form form input {
     font-size: 1.5em;
     padding: .5em 3em;
+    border: 2px solid transparent;
     border-radius: 7px;
     box-shadow: 0 2px 12px 3px rgba(53, 53, 53, 0.1);
+}
+
+.form_form form input:hover {
+    border: 2px solid #ff6d21;
 }
 
 .form_form form {
